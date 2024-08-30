@@ -63,7 +63,7 @@ jobs:
           context: .
           file: ./Dockerfile-prod
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
             
       ## deploy to production
       - name: Deploy to prod
