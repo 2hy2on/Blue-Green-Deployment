@@ -12,10 +12,6 @@ java {
         languageVersion = JavaLanguageVersion.of(17)
     }
 }
-jar {
-    archiveBaseName.set('test')  // 기본 이름
-    archiveVersion.set('0.0.1-SNAPSHOT')   // 버전
-}
 
 configurations {
     compileOnly {
