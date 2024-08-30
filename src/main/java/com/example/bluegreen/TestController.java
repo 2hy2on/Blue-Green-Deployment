@@ -9,6 +9,6 @@ public class TestController {
 
     @GetMapping("/health")
     public ResponseEntity<String> health(){
-        return ResponseEntity.ok("health");
+        return ResponseEntity.ok("health-check for blue");
     }
 }
