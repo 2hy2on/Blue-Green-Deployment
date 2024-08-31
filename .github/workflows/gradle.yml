@@ -41,9 +41,12 @@ jobs:
       - name: create application.yml
         if: contains(github.ref, 'main')
         run: |
-          cd ./src/main/resources
+          cd ./src/main
+          mkdir -p resources
+          cd ./resources
           touch ./application.yml
-          echo "${{ secrets.PROPERTIES_PROD }}" > /src/main/resources/application-prod.yml
+          ls *
+          echo "${{ secrets.PROPERTIES_PROD }}" > ./application-prod.yml
         shell: bash
 
       - name: Build With Gradle
