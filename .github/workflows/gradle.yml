@@ -40,12 +40,7 @@ jobs:
       ## create application-prod.yml
       - name: create application.yml
         if: contains(github.ref, 'main')
-        run: |
-          cd ./src/main
-          mkdir resources
-          cd ./resources
-          touch ./application.yml
-          ls *
+        run:
           echo "${{ secrets.PROPERTIES_PROD }}" > /src/main/resources/application-prod.yml
         shell: bash
 
