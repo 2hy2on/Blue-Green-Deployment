@@ -46,7 +46,7 @@ jobs:
           cd ./resources
           touch ./application.yml
           ls *
-          echo "${{ secrets.PROPERTIES_PROD }}" > ./application.yml
+          echo "${{ secrets.PROPERTIES_PROD }}" > /src/main/resources/application-prod.yml
         shell: bash
 
       - name: Build With Gradle
